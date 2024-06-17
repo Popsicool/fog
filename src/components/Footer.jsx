@@ -13,20 +13,20 @@ import "../styles/footer.css";
 
 const lst = [
   {
-    text: "About",
+    text: "Home",
     link: "/",
+  },
+  {
+    text: "About",
+    link: "/about",
   },
   {
     text: "Service",
     link: "/services",
   },
   {
-    text: "Gallery",
-    link: "/",
-  },
-  {
-    text: "About",
-    link: "/about",
+    text: "Articles",
+    link: "/articles",
   },
   {
     text: "Contact",

@@ -4,6 +4,8 @@ import { AnimatePresence } from "framer-motion";
 import { Home } from "./Home";
 import { About } from "./About";
 import { Contact } from "./Contact";
+import { Articles } from "./Articles";
+import { Article } from "./Article";
 
 export const PageRouters = () => {
   const location = useLocation();
@@ -17,6 +19,8 @@ export const PageRouters = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element= {<About/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/articles" element={<Articles/>} />
+        <Route path="/articles/:id" element={<Article/>} />
       </Routes>
     </AnimatePresence>
   );

@@ -23,17 +23,14 @@ const links = [
     text: "Service"
   },
   {
+    link: "/articles",
+    text: "Articles"
+  },
+  {
     link: "/contact",
     text: "Contact"
   },
-  {
-    link: "/",
-    text: "Home"
-  },
-  {
-    link: "/",
-    text: "Home"
-  },
+  
 ]
 export const Navigation = () => {
   const location = useLocation()
@@ -104,7 +101,7 @@ export const Navigation = () => {
         <ul>
           {links.map((item, index) => (
             <li key={index} >
-              <Link className={path === item.link ? "active" : ""} to={item.link}>{item.text}</Link>
+              <Link className={new RegExp(`^${item.link}(/|$)`).test(path) ? "active" : "" } to={item.link}>{item.text}</Link>
             </li>
           ))}
           <li></li>
