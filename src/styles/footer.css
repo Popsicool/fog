@@ -1,0 +1,107 @@
+.footer-top {
+  background-color: #24231d;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 5% 15%;
+}
+
+.footer-column:first-child {
+  width: 25%;
+}
+.footer-column:first-child ul {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  padding-top: 5%;
+}
+.footer-column p {
+  color: #a5a49a;
+}
+.footer-column li {
+  padding-bottom: 20px;
+}
+
+.footer-column hr {
+  width: 100px;
+  margin-bottom: 30px;
+  border: 1px solid #4baf47;
+}
+.footer-column:nth-child(2) span {
+  padding-left: 10%;
+}
+.footer-column:nth-child(3) {
+  width: 30%;
+}
+.footer-column p:first-child {
+  color: #ffffff;
+  font-family: manrope;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.footer-column:last-child {
+  width: 25%;
+}
+.footer-column input,
+.footer-column input:active,
+.footer-column input:focus {
+  background-color: #ffffff;
+  color: #878680;
+  border: none;
+  padding: 3%;
+  height: 35px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 80%;
+}
+.footer-column button{
+    width: 20%;
+    border: none;
+    background-color: #4BAF47;
+    height: 35px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1f1e17;
+  padding: 1% 15%;
+}
+.footer-bottom p {
+  color: #a5a49a;
+  font-family: manrope;
+}
+
+.footer-column:first-child img:hover{
+    transform: scale(2);
+    /* transform: rotate(360deg); */
+    rotate: 360deg;
+}
+.footer-column:nth-child(2) li:hover{
+    transform: scale(1.2);
+}
+.footer-column:nth-child(2) span:hover{
+    color: #4BAF47;
+    font-weight: bolder;
+}
+.footer-column:last-child button:hover img{
+    transform: rotate(270deg);
+}
+.footer-column:last-child button:hover{
+    background-color: #EEC044;
+}
+
+
+
+.footer-column li,
+.footer-column li span,
+.footer-column:first-child img,
+.footer-column:last-child img,
+.footer-column:last-child button
+{
+    transition: transform, color, font-weight, background-color, rotate;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}

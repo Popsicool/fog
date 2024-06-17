@@ -1,0 +1,90 @@
+.hero {
+  width: 100vw;
+  height: 70vh;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  inset: 0;
+  z-index: -1;
+}
+.hero p {
+  color: var(--c-white);
+}
+.hero button {
+  width: 40%;
+  background-color: var(--c-green);
+  font-weight: bold;
+  font-size: 12px;
+  padding: 3%;
+  margin: 5% 0;
+  border-radius: 20px;
+  border: none;
+  color: var(--c-white);
+  animation: 3s 1 ease-in-out button-animate;
+}
+.hero .cAgric {
+  padding-bottom: 2%;
+  animation: 3s 1 ease-in-out header-second;
+
+}
+.fog-header {
+  font-family: cbyg;
+  font-size: 7.5rem;
+  animation: 3s 1 ease-in-out header-text;
+}
+
+@keyframes header-text {
+  0%{
+    transform: translate3d(-100vw, 0, 0);
+    opacity: 0;
+  }
+  30%{
+    transform: translate3d(5rem, 0, 0);
+    opacity: .4;
+  }
+  80%{
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes header-second {
+  0%{
+    transform: translate3d(100vw, 0, 0);
+    opacity: 0;
+  }
+  30%{
+    transform: translate3d(-5rem, 0, 0);
+    opacity: .5;
+  }
+  80%{
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes button-animate {
+  from{
+    transform: translate3d(0, 100vh, 0);
+    opacity: 0;
+    scale: 0;
+  }
+  to{
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    scale: 1;
+  }
+}

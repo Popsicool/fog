@@ -1,0 +1,17 @@
+<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_4138_1006)">
+    <!-- Background of the envelope -->
+    <rect x="0" y="0" width="15" height="15" rx="2" fill="#0077B5"/>
+    <!-- Top flap of the envelope -->
+    <path d="M0 4 L7.5 9 L15 4" fill="#0077B5" stroke="white" stroke-width="1"/>
+    <!-- Bottom flap of the envelope -->
+    <path d="M0 11 L7.5 6 L15 11" fill="#0077B5" stroke="white" stroke-width="1"/>
+    <!-- LinkedIn text -->
+    <text x="3" y="12" fill="white" font-size="5" font-family="Arial" font-weight="bold">in</text>
+  </g>
+  <defs>
+    <clipPath id="clip0_4138_1006">
+      <rect width="15" height="15" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>

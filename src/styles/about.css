@@ -1,0 +1,208 @@
+.a-hero{
+    text-align: center;
+    background-image: url('../assets/images/veg.jpg');
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vh;
+    display: grid;
+    place-content: center;
+}
+.a-hero::before{
+    content: "";
+    position: absolute;
+    /* inset:0; */
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.a-hero p:first-child{
+    font-family: manrope;
+    font-size: 0.875rem;
+    color: #ffffff;
+    font-weight: 300;
+}
+.a-hero p:last-child{
+    font-family: manrope;
+    color: #ffffff;
+    font-size: 3.125rem;
+    font-weight: bolder;
+    font-weight: 600;
+}
+
+.about .section1{
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 20%;
+}
+.about .section1-left{
+    position: relative;
+}
+.about .section1-left .tractor-wrap{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.about .section1-left .tractor-wrap img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+/* .about .section1-left .tractor-wrap img:hover{
+    transform: scale(0.7);
+} */
+.about .abs1{
+    background-color: #C5CE38;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -10%;
+    top:40%;
+    z-index: -2;
+}
+.about .abs2{
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: -30%;
+    border-radius: 10px;
+}
+.about .abs2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.about .abs2 img:hover{
+    transform: scale(1.2);
+}
+
+
+.about .section1-right{
+    padding: 0 10% 0 0;
+    width: 50%;
+}
+.about .section1-right p:first-child{
+    color: #EEC044;
+    font-family: cbyg;
+    font-size: 1.5rem;
+}
+.about .section1-right p:nth-child(2){
+    font-family: manrope;
+    color: #1F1E17;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.about .section1-right p:nth-child(3){
+    color: #4BAF47;
+    font-size: 1.25rem;
+    font-family: manrope;
+    padding-top: 3%;
+}
+.about .section1-right p:nth-child(4){
+    color: #878680;
+    font-family: manrope;
+    padding: 2% 0;
+}
+
+.about .team-section{
+    color: #ffffff;
+    display: grid;
+    padding: 3% 0 15% 0;
+    place-content: center;
+}
+.about .team-section p:first-child{
+    color: var(--c-orange);
+    font-family: cbyg;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.about .team-section p:nth-child(2){
+    color: #1F1E17;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 3rem;
+    padding: 2% 0;
+}
+.about  .team-members{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    gap:5rem;
+    /* height: 200px; */
+}
+.team-members .img-wrap{
+    width: 100%;
+    border-radius: 10px;
+    height: 400px;
+    overflow: hidden;
+    border: none;
+}
+.about .img-wrap  img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 100%;
+    border: none;
+}
+.about .img-wrap  img:hover{
+    transform: scale(1.1);
+}
+.about .team-card{
+    position: relative;
+}
+.about .info-box{
+    position: absolute;
+    bottom: 0;
+    background-color: #ffffff;
+    width: 80%;
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    height: 20%;
+}
+.about .info-box p:first-child{
+    /* color: #1F1E17; */
+    font-size: 1.25rem;
+}
+.about .info-box p:nth-child(2){
+    color: #878680;
+    padding: 3% 0;
+    font-size: .7rem;
+}
+
+.about .info-box .icons{
+    width: 50%;
+    align-content: end;
+    display: flex;
+    margin-left: 25%;
+    justify-content: space-between;
+}
+
+.about .info-box .icons img:hover{
+    transform: scale(2);
+    rotate: 360deg;
+}
+.about .video-wrap{
+    width: 100vw;
+    height: 500px;
+}
+.about .video-wrap video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about .abs2 img,
+.about .img-wrap  img,
+.about .info-box .icons img
+/* .about .section1-left .tractor-wrap img */
+{
+    transition: transform, rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}

@@ -1,0 +1,126 @@
+.logo-text-1 {
+  font-family: Poppins, sans-serif;
+}
+svg {
+  width: 100%;
+  height: 50px;
+}
+svg text {
+  font-size: 20rem;
+  stroke-width: 2;
+  letter-spacing: -20px;
+}
+
+svg text.logo-text-1 {
+  fill: var(--c-green);
+  stroke: transparent;
+  stroke-width: 0;
+  stroke-dashoffset: -25%;
+  stroke-dasharray: 32% 0;
+  animation: 4s infinite alternate animate-stroke;
+}
+
+@keyframes animate-stroke {
+  0% {
+    fill: transparent;
+    stroke: var(--c-green);
+    stroke-width: 3;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 32%;
+  }
+  50% {
+    fill: transparent;
+    stroke: var(--c-white);
+    stroke-width: 3;
+  }
+  80%,
+  100% {
+    fill: var(--c-green);
+    stroke: transparent;
+    stroke-width: 0;
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 32% 0;
+  }
+}
+
+.nav-top-right,
+.nav-top-right ul,
+.tsc,
+.nav-top,
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-top {
+  width: 100%;
+  padding: 2% 10%;
+}
+.nav-top-left {
+  width: 20%;
+  display: flex;
+}
+.nav-top-right {
+  width: 70%;
+}
+
+.logo-wrap {
+  width: 50px;
+  height: 50px;
+}
+.logo-wrap img {
+  width: 100%;
+  height: 100%;
+}
+/* .nav-top-right ul, .nav-top-right div{
+    width: 25%;
+} */
+.nav-top-right ul li {
+  width: 25%;
+}
+.tsc {
+  border-left: 1px solid var(--c-grey);
+  padding-left: 10%;
+}
+.tsc img {
+  width: 20%;
+}
+.tsc-text p:first-child {
+  color: var(--c-grey);
+  font-weight: lighter;
+  font-size: 12px;
+}
+.tsc-text p:last-child {
+  color: var(--c-black);
+  font-weight: bold;
+}
+
+.social-icon-wrap {
+  padding: 20%;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #f8f7f0;
+}
+.social-icon-wrap img {
+  width: 100%;
+  height: 100%;
+}
+nav {
+  position: sticky;
+  top: 0;
+}
+nav ul {
+  padding: 1.5% 10%;
+  background-color: #4baf47;
+}
+nav a{
+  color: #ffffff !important;
+}
+nav a:hover{
+  color: var(--c-orange) !important;
+  scale: 2;
+}
+nav .active{
+  color: var(--c-orange2) !important;
+  border-bottom: 3px solid var(--c-orange2);
+}

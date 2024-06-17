@@ -1,0 +1,139 @@
+.testimonies-section {
+  background-color: #e9f1ee;
+  display: grid;
+  place-content: center;
+  padding: 5% 0;
+}
+
+.testimonies-section .test-bg {
+  height: 15px;
+  width: 55vw;
+  background-color: #f6f9f8;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  justify-self: center;
+}
+.review-section {
+  position: relative;
+}
+.review {
+  background-color: #ffffff;
+  padding: 5%;
+  display: grid;
+  place-content: center;
+  width: 60vw;
+  height: 300px;
+  border-radius: 20px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}
+.review p {
+  color: #04000b;
+  font-weight: outfit;
+  padding-top: 1%;
+}
+.review-pict {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  top: 80%;
+  left: 47%;
+}
+.review-pict img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.testimonies-section .custRev {
+  color: #49a760;
+  font-family: sil;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.testimonies-section .whatPs {
+  color: #04000b;
+  font-size: 2.125rem;
+  text-align: center;
+  font-weight: outfit;
+  font-weight: 700;
+  padding-bottom: 2%;
+}
+.reviewer-name,
+.reviewer-description {
+  text-align: center;
+}
+.reviewer-name {
+  color: #04000b;
+  font-size: 1.75rem;
+  font-family: outfit;
+  padding: 3% 0 0 0;
+  font-weight: 500;
+}
+.reviewer-description {
+  text-transform: uppercase;
+  color: #49a760;
+  font-size: 1.125rem;
+  font-family: outfit;
+  padding: 0.5% 0 2% 0;
+}
+.testimonies-section .inactive {
+  display: none;
+}
+.testimonies-section .dots {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+  margin-left: 45%;
+}
+
+.testimonies-section .dots span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--c-grey);
+  background: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+}
+.testimonies-section .dots span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background-color: var(--c-grey);
+  border-radius: 50%;
+}
+.testimonies-section .dots span.active-dot::after {
+  background-color: #000000;
+}
+.testimonies-section .dots span.active-dot {
+  border: 2px solid #000000;
+}
+
+.rev-cards {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  position: absolute;
+  width: 100%;
+}
+
+.rev-cards.active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+}
+
+.rev-cards.inactive {
+  display: none;
+}
