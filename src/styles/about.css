@@ -5,7 +5,7 @@
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 30vh;
+    height: 20vh;
     display: grid;
     place-content: center;
 }
@@ -26,7 +26,7 @@
 .a-hero p:last-child{
     font-family: manrope;
     color: #ffffff;
-    font-size: 3.125rem;
+    font-size: 2rem;
     font-weight: bolder;
     font-weight: 600;
 }
@@ -205,4 +205,66 @@
     transition: transform, rotate;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
+}
+
+@media screen and (max-width:500px){
+    .about .section1-left .tractor-wrap{
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+    }
+    .about .section1{
+        padding: 10%;
+        width: 100vw;
+
+    }
+    .about .section1-right{
+        width: 100%;
+        padding-right: 0;
+        padding-left: 2%;
+    }
+    .about .section1-right p:first-child{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .about .section1-right p:nth-child(2){
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+    .about .section1-right p:nth-child(3){
+        color: #4BAF47;
+        font-size: 1rem;
+        width: 100%;
+        font-family: manrope;
+        padding-top: 3%;
+    }
+    .about .section1-right p:nth-child(4){
+        color: #878680;
+        font-family: manrope;
+        padding: 2% 0;
+    }
+    .about .video-wrap{
+        height: 300px;
+    }
+    .about .team-section p:nth-child(2){
+        font-size: 1.5rem;
+    }
+    .about  .team-members{
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+        gap:2vw;
+    }
+    .team-members .img-wrap{
+        height: 300px;
+    }
+
+    .about .info-box p:first-child{
+        font-size: 1rem;
+    }
+    .about .info-box p:nth-child(2){
+        padding: 1% 0;
+        font-size: .7rem;
+    }
+
 }

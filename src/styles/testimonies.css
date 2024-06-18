@@ -137,3 +137,28 @@
 .rev-cards.inactive {
   display: none;
 }
+
+@media screen and (max-width:500px){
+  .testimonies-section .test-bg{
+    width: 70vw;
+  }
+  .review {
+    padding: 5%;
+    width: 80vw;
+    height: 200px;
+  }
+  .review-pict {
+    top: 80%;
+    left: 35%;
+  }
+  .reviewer-name {
+    font-size: 1.3rem;
+    padding: 17% 0 2% 0;
+  }
+  .testimonies-section .dots {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin-left: 35%;
+  }
+}

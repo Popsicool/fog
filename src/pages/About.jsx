@@ -36,7 +36,7 @@ const teams = [
     email: "mailto:olorunwaakodogbo@gmail.com",
   },
   {
-    name: "DR ONAOLAPO AYOTOMILOLA O.",
+    name: "DR ONAOLAPO AYOTOMILOLA",
     position: "Veterinary Doctor",
     phone: "+2348130300717",
     image: ona,

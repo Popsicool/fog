@@ -7,7 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 import fogLogo from "../assets/images/fog_logo.jpg";
 import facebook from "../assets/images/facebook.svg";
 import instagram from "../assets/images/instagram.svg";
-import linkedin from "../assets/images/linkedin.svg";
+// import linkedin from "../assets/images/linkedin.svg";
 import twitter from "../assets/images/twitter.svg";
 
 import "../styles/navigation.css";
@@ -15,29 +15,28 @@ import "../styles/navigation.css";
 const links = [
   {
     link: "/",
-    text: "Home"
+    text: "Home",
   },
   {
     link: "/about",
-    text: "About"
+    text: "About",
   },
   {
     link: "/services",
-    text: "Service"
+    text: "Service",
   },
   {
     link: "/articles",
-    text: "Articles"
+    text: "Articles",
   },
   {
     link: "/contact",
-    text: "Contact"
+    text: "Contact",
   },
-  
-]
+];
 export const Navigation = () => {
-  const location = useLocation()
-  const path = location.pathname
+  const location = useLocation();
+  const path = location.pathname;
   return (
     <motion.header>
       <section className="nav-top">
@@ -50,20 +49,25 @@ export const Navigation = () => {
             <text x="-150%" y="50%" dy=".32em" className="logo-text-1">
               FOG agric
             </text>
-           
           </svg>
         </div>
         <div className="nav-top-right">
           <ul>
             <li>
-              <a href="https://www.facebook.com/FogAgricServices/" target="_blank">
+              <a
+                href="https://www.facebook.com/FogAgricServices/"
+                target="_blank"
+              >
                 <div className="social-icon-wrap">
                   <img src={facebook} alt="facebook" />
                 </div>
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/p/CefgUy_K70K/?igshid=YmMyMTA2M2Y=" target="_blank">
+              <a
+                href="https://www.instagram.com/p/CefgUy_K70K/?igshid=YmMyMTA2M2Y="
+                target="_blank"
+              >
                 <div className="social-icon-wrap">
                   <img src={instagram} alt="facebook" />
                 </div>
@@ -98,13 +102,25 @@ export const Navigation = () => {
               <p>Ajibode, U.I Ibadan.</p>
             </div>
           </div>
+          <div className="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </section>
       <nav>
         <ul>
           {links.map((item, index) => (
-            <li key={index} >
-              <Link className={new RegExp(`^${item.link}(/|$)`).test(path) ? "active" : "" } to={item.link}>{item.text}</Link>
+            <li key={index}>
+              <Link
+                className={
+                  new RegExp(`^${item.link}(/|$)`).test(path) ? "active" : ""
+                }
+                to={item.link}
+              >
+                {item.text}
+              </Link>
             </li>
           ))}
           <li></li>

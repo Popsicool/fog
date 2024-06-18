@@ -35,19 +35,19 @@ export const Testimonies = () => {
   };
   const resetInterval = () => {
     if (intervalRef.current) {
-      clearInterval(intervalRef.current);
+      // clearInterval(intervalRef.current);
     }
-    intervalRef.current = setInterval(() => {
-      setPos(prevPos => (prevPos + 1) % testimonials.length);
-    }, 5000);
+    // intervalRef.current = setInterval(() => {
+    //   setPos(prevPos => (prevPos + 1) % testimonials.length);
+    // }, 5000);
   };
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPos(prevPos => (prevPos + 1) % testimonials.length);
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setPos(prevPos => (prevPos + 1) % testimonials.length);
+  //   }, 5000);
 
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
+  //   return () => clearInterval(interval);
+  // }, [testimonials.length]);
   return (
     <motion.section className="testimonies-section">
       <p className="custRev">Customers' Review</p>
@@ -74,13 +74,13 @@ export const Testimonies = () => {
           </div>
           <p className="reviewer-name">{testimony.name}</p>
           <p className="reviewer-description">{testimony.post}</p>
+        </div>
+      ))}
           <div className="dots">
             <span className={pos === 0 ? "active-dot" : ""} onClick={() => changePos(0)}></span>
             <span className={pos === 1 ? "active-dot" : ""} onClick={() => changePos(1)}></span>
             <span className={pos === 2 ? "active-dot" : ""} onClick={() => changePos(2)}></span>
           </div>
-        </div>
-      ))}
 
 
 

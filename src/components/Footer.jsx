@@ -92,7 +92,7 @@ export const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>© All Copyright {new Date().getFullYear() } by FOG</p>
-        <p>Built by <a href="#">Popsicool</a></p>
+        <p>Built by <a href="https://popsicool.fog-agric.com" target="_blank">Popsicool</a></p>
       </div>
     </footer>
   );

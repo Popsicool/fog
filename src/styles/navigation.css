@@ -122,6 +122,24 @@ nav a:hover{
   color: var(--c-orange) !important;
   scale: 2;
 }
+
+.nav-top-right .hamburger-menu{
+  display: flex;
+  flex-direction:column;
+  position:absolute;
+  top:10vh;
+  gap:10px;
+  right:5%;
+  cursor:pointer;
+  z-index: 99;
+}
+
+.nav-top-right .hamburger-menu span{
+  width:20px;
+  height:2px;
+  background-color:#000000;
+}
+
 nav .active{
   color: var(--c-orange2) !important;
   border-bottom: 3px solid var(--c-orange2);
@@ -131,3 +149,20 @@ nav .active{
   transition-timing-function: ease-in-out;
 }
 
+
+@media screen and (max-width:500px) {
+.nav-top{
+  display: none;
+}
+/* nav ul{
+  display: grid;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  place-content: center;
+  z-index: 9;
+  /* background-color: red; */
+  padding: 0;
+  display: none;
+} */
+}
