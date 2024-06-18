@@ -6,6 +6,7 @@ import { About } from "./About";
 import { Contact } from "./Contact";
 import { Articles } from "./Articles";
 import { Article } from "./Article";
+import { Services } from "./Services";
 
 export const PageRouters = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ export const PageRouters = () => {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/articles" element={<Articles/>} />
         <Route path="/articles/:id" element={<Article/>} />
+        <Route path="/services" element={<Services/>} />
       </Routes>
     </AnimatePresence>
   );

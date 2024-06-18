@@ -1,0 +1,199 @@
+.services .service-card{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation: 2s infinite alternate ease-in-out moveCard;
+}
+.services .service-card:nth-child(2){
+    animation: 1.3s infinite alternate ease-in-out moveCard2;
+}
+.services .service-card:nth-child(3){
+    animation: 2.3s infinite alternate ease-in-out moveCard3;
+}
+.services .service-card:nth-child(4){
+    animation: 1.5s infinite alternate ease-in-out moveCard4;
+}
+
+.services .services-hanging{
+    padding: 0 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.services .what-we-do{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 5% 15%;
+}
+
+.services .what-we-do .left{
+    width: 100%;
+    height: 300px;
+}
+.services .what-we-do .right{
+    padding: 0 5%;
+}
+.services .what-we-do .right li{
+    margin: 2% 0;
+}
+.services .what-we-do .right span{
+    padding-left: 1%;
+}
+.services .what-we-do .right p:first-child,
+.services .what-we-offer p:first-child{
+    color: #EEC044;
+    font-size: 1.5rem;
+    font-family: cbyg;
+}
+.services .what-we-do .right p:nth-child(2),
+.services .what-we-offer p:nth-child(2){
+    color: #1F1E17;
+    font-family: manrope;
+    font-size: 2rem;
+    font-weight: 1000;
+}
+
+.services .what-we-do .ser-hanger{
+    text-align: center;
+    background-color: #EEC044;
+    color: var(--c-green);
+    width: 100%;
+    font-size: 2rem;
+    padding-bottom: 10%;
+    font-weight: 1000;
+}
+
+.services .what-we-do .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.services .service-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+
+.services .service-card p:last-child{
+    position: absolute;
+    transform: rotate(-45deg);
+    top:40%;
+    color: var(--c-orange);
+    left: 25%;
+    font-weight: 1000;
+    font-family: Poppins;
+    font-size: 1rem;
+    z-index: 1;
+}
+.services .service-card p:first-child{
+    position: absolute;
+    top:5%;
+    left:5%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.services .service-card::before{
+content: "";
+  position: absolute;
+  background-color: rgba(31, 30, 23, .5);
+  inset: 0;
+  /* background: transparent; */
+  z-index: 1;
+}
+
+
+.services .what-we-offer{
+    padding: 5% 15%;
+}
+.services .what-we-offer p:first-child{
+    color: #EEC044;
+    font-size: 1.5rem;
+    font-family: cbyg;
+}
+.services .what-we-offer .filters{
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 0;
+}
+.services .what-we-offer .filters button{
+    padding: 1% 5%;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--c-green);
+    border: 1px solid var(--c-green);
+}
+.services .what-we-offer .filters button.active,
+.services .what-we-offer .filters button:hover{
+    background-color: var(--c-green);
+    color: #ffffff;
+}
+.services .what-we-offer > p{
+    text-align: center;
+}
+
+
+
+.services .pict-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.services .pict-gallery .img-wrap{
+    /* width: 200px; */
+    height: 200px;
+    overflow: hidden;
+}
+.services .pict-gallery .img-wrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.services .pict-gallery .img-wrap img:hover{
+    transform: scale(1.3);
+    cursor: grab;
+}
+@keyframes moveCard {
+    from{
+        transform: rotate(45deg);
+    }
+    to{
+        transform: rotate(50deg);
+    }
+}
+@keyframes moveCard2 {
+    from{
+        transform: rotate(45deg);
+    }
+    to{
+        transform: rotate(52deg);
+    }
+}
+@keyframes moveCard3 {
+    from{
+        transform: rotate(45deg);
+    }
+    to{
+        transform: rotate(53deg);
+    }
+}
+@keyframes moveCard4 {
+    from{
+        transform: rotate(45deg);
+    }
+    to{
+        transform: rotate(48deg);
+    }
+}
+
+.services .what-we-offer .filters button,
+.services .pict-gallery .img-wrap img
+{
+    transition: background-color, color, transform;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
