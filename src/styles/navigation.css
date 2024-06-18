@@ -53,7 +53,7 @@ nav ul {
 }
 .nav-top {
   width: 100%;
-  padding: 2% 10%;
+  padding: 1% 10%;
 }
 .nav-top-left {
   width: 20%;
@@ -79,19 +79,21 @@ nav ul {
 }
 .tsc {
   border-left: 1px solid var(--c-grey);
-  padding-left: 10%;
+  padding-left: 2%;
 }
 .tsc img {
   width: 20%;
+  padding-right: 5%;
 }
 .tsc-text p:first-child {
   color: var(--c-grey);
   font-weight: lighter;
-  font-size: 12px;
+  font-size: .75rem;
 }
 .tsc-text p:last-child {
   color: var(--c-black);
   font-weight: bold;
+  font-size: .875rem;
 }
 
 .social-icon-wrap {
@@ -123,4 +125,9 @@ nav a:hover{
 nav .active{
   color: var(--c-orange2) !important;
   border-bottom: 3px solid var(--c-orange2);
+  font-weight: 700;
+  transition: color, border-bottom, font-weight;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
 }
+

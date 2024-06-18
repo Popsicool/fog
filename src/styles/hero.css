@@ -36,6 +36,13 @@
   border: none;
   color: var(--c-white);
   animation: 3s 1 ease-in-out button-animate;
+  transition: background-color, color;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+}
+.hero button:hover{
+  background-color: var(--c-orange);
+  color: var(--c-white);
 }
 .hero .cAgric {
   padding-bottom: 2%;

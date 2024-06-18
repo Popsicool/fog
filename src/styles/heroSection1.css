@@ -53,6 +53,14 @@
     padding: 2% 0;
     border-radius: 20px;
     border:none;
+    transition: transform, background-color, color, scale;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+.home-section-1 button:hover{
+    background-color: var(--c-green);
+    color: #ffffff;
+    scale: 1.2;
 }
 .home-section-1 .right{
     box-shadow: 1px 1px 5px 5px #eaebef;

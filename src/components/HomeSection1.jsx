@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import pol from "../assets/images/pol1.jpg";
 import check from "../assets/images/check.svg";
 import check2 from "../assets/images/check2.svg";
+import { Link } from "react-router-dom";
 import fogLogo from "../assets/images/fog_logo.jpg";
 import blueberry from "../assets/images/blueberry.svg";
 import bird from "../assets/videos/birds.mp4";
@@ -37,7 +38,9 @@ export const HomeSection1 = () => {
             <img src={check} alt="check" />
             <span>Good customer delivery</span>
           </p>
-          <button>Discover more</button>
+          <Link to="/services">
+            <button>Discover more</button>
+          </Link>
         </div>
         <div className="right">
           <p>
