@@ -245,5 +245,8 @@ content: "";
         grid-template-columns: 1fr 1fr;
         margin: 3% 0;
     }
+    .services .what-we-offer .filters button{
+        padding: 5%;
+    }
     
 }

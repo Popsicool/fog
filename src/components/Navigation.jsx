@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { motion } from "framer-motion";
 import call from "../assets/images/Icon.svg";
 import email from "../assets/images/email.svg";
@@ -36,14 +36,20 @@ const links = [
 ];
 export const Navigation = () => {
   const location = useLocation();
+  const [showMenu, setShowMenu] = useState(false)
+  const toggleHambugger = () => {
+    setShowMenu(!showMenu)
+  }
   const path = location.pathname;
   return (
     <motion.header>
       <section className="nav-top">
         <div className="nav-top-left">
-          <div className="logo-wrap">
-            <img src={fogLogo} alt="fog-logo" />
-          </div>
+          <Link to="/">
+            <div className="logo-wrap">
+              <img src={fogLogo} alt="fog-logo" />
+            </div>
+          </Link>
 
           <svg viewBox="0 0 500 500">
             <text x="-150%" y="50%" dy=".32em" className="logo-text-1">
@@ -102,15 +108,16 @@ export const Navigation = () => {
               <p>Ajibode, U.I Ibadan.</p>
             </div>
           </div>
-          <div className="hamburger-menu">
+          
+        </div>
+        <div onClick={toggleHambugger} className="hamburger-menu">
             <span></span>
             <span></span>
             <span></span>
           </div>
-        </div>
       </section>
       <nav>
-        <ul>
+        <ul className= {showMenu ? "show-menu" : ""}>
           {links.map((item, index) => (
             <li key={index}>
               <Link

@@ -18,7 +18,7 @@ import willie from "../assets/images/team/willie.jpg";
 
 const teams = [
   {
-    name: "Aina Adeyemi",
+    name: "AINA ADEYEMI",
     position: "Sales and Operation manager",
     phone: "+2348062929576",
     image: tecno,
