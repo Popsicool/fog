@@ -12,7 +12,7 @@ import ona from "../assets/images/team/ona.jpg";
 import pop from "../assets/images/team/pop.png";
 import facebook from "../assets/images/facebook.svg"
 import twitter from "../assets/images/twitter.svg"
-import bird from "../assets/videos/birds.mp4"
+import bird from "../assets/videos/intro.mp4"
 import envelope from "../assets/images/env2.svg"
 import willie from "../assets/images/team/willie.jpg";
 

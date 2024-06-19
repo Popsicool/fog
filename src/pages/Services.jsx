@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Subheading } from "../components/Subheading";
-import veg from "../assets/images/veg.jpg";
+import veg from "../assets/images/poster.jpg";
 import doc from "../assets/images/doc.jpg";
 import pol from "../assets/images/pol1.jpg";
 import check from "../assets/images/check.svg";
