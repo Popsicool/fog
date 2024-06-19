@@ -192,6 +192,13 @@
     width: 200%;
     padding: 5%;
   }
+  .home-section-1 .right span {
+    font-size: 1rem;
+  }
+  .home-section-1 .right img {
+    width: 20px;
+    height: 20px;
+  }
   .home-section-1b {
     display: grid;
     justify-content: space-between;

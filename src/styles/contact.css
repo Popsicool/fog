@@ -117,3 +117,22 @@
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
 }
+
+@media screen and (max-width:500px) {
+    .contact .contact-cards, .contact .contact-down{
+        display: grid;
+    }
+    .contact .contact-down{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 10% 20% 10%;
+        border-radius: 10px;
+    }
+    .contact button{
+        width: 100%;
+    }
+    .contact iframe{
+        order:1;
+        height: 300px;
+    }
+}

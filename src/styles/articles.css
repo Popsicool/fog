@@ -97,3 +97,14 @@
     padding-bottom: 2%;
     margin-bottom: 0;
 }
+
+@media screen and (max-width:500px) {
+    .articles .article-grid{
+        grid-template-columns: 1fr;
+        
+    }
+    .articles .post-card .card-top, .articles .card-down{
+        width: 100%;
+    }
+
+}

@@ -216,12 +216,12 @@
     .about .section1{
         padding: 10%;
         width: 100vw;
+        display: grid;
 
     }
     .about .section1-right{
         width: 100%;
-        padding-right: 0;
-        padding-left: 2%;
+        padding: 5%;
     }
     .about .section1-right p:first-child{
         font-size: 1rem;
@@ -247,6 +247,9 @@
     .about .video-wrap{
         height: 300px;
     }
+    .about .team-section{
+        padding-top: 10%;
+    }
     .about .team-section p:nth-child(2){
         font-size: 1.5rem;
     }
@@ -258,7 +261,10 @@
     .team-members .img-wrap{
         height: 300px;
     }
-
+    .about .info-box{
+        width: 100%;
+        height: 30%;
+    }
     .about .info-box p:first-child{
         font-size: 1rem;
     }
