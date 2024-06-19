@@ -1,3 +1,6 @@
+.navigation{
+  position: relative;
+}
 .logo-text-1 {
   font-family: Poppins, sans-serif;
 }
@@ -157,18 +160,31 @@ nav .active {
   .nav-top .nav-top-right {
     display: none;
   }
-  nav ul {
+  .nav-top{
+    height: 10vh;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+  }
+  nav ul{
     display: grid;
+    line-height: 3rem;
+  }
+  nav{
     position: fixed;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     padding: 10%;
-    line-height: .5rem;
+    z-index:9999999999 !important ;
+    top:10vh;
     background-color: var(--c-green);
     transform: translateX(-100vw);
     transition: transform .3s ease-in-out;
   }
-  nav ul.show-menu{
+  nav.show-menu{
     transform: translateX(0);
   }
   .nav-top .hamburger-menu{

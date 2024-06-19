@@ -53,6 +53,7 @@
   font-family: cbyg;
   font-size: 7.5rem;
   animation: 3s 1 ease-in-out header-text, 4s ease-in-out  2 animPop;
+  transform-origin: left;
 }
 
 @keyframes header-text {

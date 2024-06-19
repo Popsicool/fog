@@ -42,9 +42,9 @@ export const Navigation = () => {
   }
   const path = location.pathname;
   return (
-    <motion.header>
+    <motion.header className="navigation">
       <section className="nav-top">
-        <div className="nav-top-left">
+        <div className="nav-top-left" onClick={() => setShowMenu(false)}>
           <Link to="/">
             <div className="logo-wrap">
               <img src={fogLogo} alt="fog-logo" />
@@ -116,10 +116,10 @@ export const Navigation = () => {
             <span></span>
           </div>
       </section>
-      <nav>
-        <ul className= {showMenu ? "show-menu" : ""}>
+      <nav className= {showMenu ? "show-menu" : ""}>
+        <ul>
           {links.map((item, index) => (
-            <li key={index}>
+            <li key={index} onClick={() => setShowMenu(false)}>
               <Link
                 className={
                   new RegExp(`^${item.link}(/|$)`).test(path) ? "active" : ""

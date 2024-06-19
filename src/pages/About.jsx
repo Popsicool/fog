@@ -55,7 +55,7 @@ const teams = [
   },
   {
     name: "AKINOLA SAMSON",
-    position: "Snr Software Engineer",
+    position: "Software Engineer",
     phone: "+2348069482021",
     image: pop,
     twitter: "https://twitter.com/Samson_Akinola1",

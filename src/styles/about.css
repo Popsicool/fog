@@ -208,6 +208,9 @@
 }
 
 @media screen and (max-width:500px){
+    .a-hero{
+        margin-top:10vh;
+    }
     .about .section1-left .tractor-wrap{
         width: 100%;
         height: 300px;

@@ -150,7 +150,7 @@
   font-size: 5rem;
   font-family: Outfit;
   animation: 3s ease-in-out  infinite animPop;
-  transform-origin: left;
+  transform-origin: center;
 }
 
 .home-section-1b .right-bottom .xyz {
