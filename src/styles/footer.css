@@ -1,5 +1,9 @@
+footer{
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .footer-top {
-  background-color: #24231d;
+  background-color: #24231d !important;
   display: flex;
   justify-content: space-between;
   gap: 3rem;
@@ -128,7 +132,7 @@
   }
   .footer-column:nth-child(3){
     width: 100%;
-    padding-left: 25%;
+    padding-left:5%;
     order:3;
   }
   .footer-column:last-child{
