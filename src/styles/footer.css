@@ -157,7 +157,7 @@ footer{
   .footer-bottom {
     display: grid;
     background-color: #1f1e17;
-    padding: 1%;
+    padding: 5% 0 1% 0;
   }
   .footer-bottom p {
     color: #a5a49a;

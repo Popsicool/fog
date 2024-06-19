@@ -52,10 +52,20 @@
 .fog-header {
   font-family: cbyg;
   font-size: 7.5rem;
-  animation: 3s 1 ease-in-out header-text, 4s ease-in-out  2 animPop;
+  animation: 3s 1 ease-in-out header-text, 4s ease-in-out  2 animPop2;
   transform-origin: left;
 }
 
+@keyframes animPop2 {
+  0%, 100%{
+    scale: 1;
+    color:var(--c-orange);
+  }
+  50%{
+    scale:1.05;
+    color: var(--c-green);
+  }
+}
 @keyframes header-text {
   0%{
     transform: translate3d(-100vw, 0, 0);
