@@ -75,8 +75,7 @@ export const Footer = () => {
             <li>
               <img className="aa" src={loc} alt="call" />{" "}
               <span>
-                House 6, Onile aro Goshen Estate, Ajibode, U.I Ibadan. Farm 1
-                Address
+                House 6, Onile aro Goshen Estate, Ajibode, U.I Ibadan.
               </span>
             </li>
           </ul>

@@ -5,18 +5,18 @@ import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import { proxy } from "valtio";
 import posts from "./components/Posts";
-import { Loader } from "./components/Loader";
+// import { Loader } from "./components/Loader";
 
 export const state = proxy({
   posts: [],
 });
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   useEffect(() => {
-    window.addEventListener("load", () => {
-      setLoading(false);
-    });
+  //   window.addEventListener("load", () => {
+  //     setLoading(false);
+  //   });
     // const url = "https://www.api.schf.org.ng/all";
     // fetch(url)
     //   .then((res) => res.json())
@@ -34,15 +34,12 @@ function App() {
 
   return (
     <HelmetProvider>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
+
+        {/* <Loader /> */}
           <Navigation />
           <PageRouters />
           <Footer />
-        </>
-      )}
+
     </HelmetProvider>
   );
 }
