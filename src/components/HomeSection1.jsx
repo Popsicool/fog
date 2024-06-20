@@ -8,6 +8,7 @@ import fogLogo from "../assets/images/fog_logo.jpg";
 import blueberry from "../assets/images/blueberry.svg";
 import bird from "../assets/videos/birds.mp4";
 import "../styles/heroSection1.css";
+import {EggSvg} from "./EggSvg"
 
 export const HomeSection1 = () => {
   return (
@@ -16,6 +17,7 @@ export const HomeSection1 = () => {
         <div className="img-wrap">
           <img src={pol} alt="point of lay birds" />
         </div>
+
         <div className="middle">
           <p>
             Your dependable <br />
@@ -44,16 +46,16 @@ export const HomeSection1 = () => {
         </div>
         <div className="right">
           <p>
-            <img src={blueberry} alt="icon" /> <span>Day old chicks</span>
+          <EggSvg /> <span>Day old chicks</span>
           </p>
           <p>
-            <img src={blueberry} alt="icon" /> <span>Point of lay</span>
+            <EggSvg /> <span>Point of lay</span>
           </p>
           <p>
-            <img src={blueberry} alt="icon" /> <span>Point of cage</span>
+          <EggSvg /> <span>Point of cage</span>
           </p>
           <p>
-            <img src={blueberry} alt="icon" /> <span>Agricultural inputs</span>
+          <EggSvg /> <span>Agricultural inputs</span>
           </p>
         </div>
       </div>

@@ -1,0 +1,66 @@
+#eye {
+  animation: 2s ease-in-out infinite alternate eye-animate;
+  transform-origin: center;
+}
+@keyframes eye-animate {
+  0%,
+  100% {
+    opacity: 1;
+    color: blue;
+    scale: 1;
+  }
+  50% {
+    opacity: 0;
+    scale: 0;
+    color: red;
+  }
+}
+[id^="out-"] {
+  animation: 4s ease-in-out infinite alternate spin;
+  transform-origin: center;
+}
+@keyframes spin {
+  0%,
+  80% {
+    fill: green;
+  }
+  50% {
+    fill: orange;
+  }
+}
+[id^="in-"] {
+  animation: 1s ease-in-out infinite alternate pulse;
+  transform-origin: center;
+}
+#in-02 {
+  animation-duration: 1.2s;
+}
+#in-03 {
+  animation-duration: 2.4s;
+}
+#in-04 {
+  animation-duration: 3.6s;
+}
+#in-05 {
+  animation-duration: 6.8s;
+}
+#illustration * {
+  transform-box: fill-box;
+}
+#egg {
+  animation: 1s ease-in-out infinite alternate pulse;
+  transform-origin: center;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    fill: orange;
+    /* opacity: 1; */
+  }
+  50% {
+    transform: scale(0.9);
+    fill: green;
+    /* opacity: 0; */
+  }
+}
