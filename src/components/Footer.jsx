@@ -6,6 +6,8 @@ import loc from "../assets/images/loc.svg";
 import sub from "../assets/images/sub.svg";
 import facebook from "../assets/images/facebook2.svg";
 import twitter from "../assets/images/twitter2.svg";
+import sectionAnimate from "./SlidingVariants";
+import { motion } from "framer-motion";
 import instagram from "../assets/images/instagram2.svg";
 import { Link } from "react-router-dom";
 
@@ -36,7 +38,12 @@ const lst = [
 
 export const Footer = () => {
   return (
-    <footer>
+    <motion.footer
+    variants={sectionAnimate}
+      initial="start"
+      whileInView="end"
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ staggerChildren: 1 }}>
       <div className="footer-top">
         <div className="footer-column">
           <p>FOG</p>
@@ -93,6 +100,6 @@ export const Footer = () => {
         <p>© All Copyright {new Date().getFullYear() } by FOG</p>
         <p>Built by <a href="https://popsicool.fog-agric.com" target="_blank">Popsicool</a></p>
       </div>
-    </footer>
+    </motion.footer>
   );
 };

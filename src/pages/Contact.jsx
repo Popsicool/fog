@@ -1,10 +1,16 @@
 import React from "react";
 import { Subheading } from "../components/Subheading";
 import sub from "../assets/images/sub.svg";
+import sectionAnimate from "../components/SlidingVariants";
+import pageVariant from "../components/PageVariants";
 import "../styles/contact.css";
+import { motion } from "framer-motion";
 export const Contact = () => {
   return (
-    <div className="contact">
+    <motion.div className="contact"
+    variants={pageVariant}
+    initial="start"
+      animate="end">
       <Subheading subt="Home / contact" tit="Contact" />
       <div className="contact-cards">
         <div className="contact-card">
@@ -31,7 +37,12 @@ export const Contact = () => {
           <p>10am-2pm on saturdays</p>
         </div>
       </div>
-      <div className="contact-down">
+      <motion.div className="contact-down"
+      variants={sectionAnimate}
+      initial="start"
+      whileInView="end"
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ staggerChildren: 1 }}>
         <iframe
           title="location"
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15825.954437703762!2d3.8146535999999998!3d7.411048200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1689954050789!5m2!1sen!2sng"
@@ -52,7 +63,7 @@ export const Contact = () => {
                 <button>Send a Message <img src={sub} alt="sub" /></button>
             </form>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };

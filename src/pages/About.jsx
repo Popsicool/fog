@@ -8,12 +8,15 @@ import { Testimonies } from "../components/Testimonies";
 import tecno from "../assets/images/team/tecno1.jpg";
 import ako from "../assets/images/team/ako.jpg";
 import tobi from "../assets/images/team/tobi.jpg";
+import { motion } from "framer-motion";
 import ona from "../assets/images/team/ona.jpg";
 import pop from "../assets/images/team/pop.png";
 import facebook from "../assets/images/facebook.svg"
 import twitter from "../assets/images/twitter.svg"
 import bird from "../assets/videos/intro.mp4"
 import envelope from "../assets/images/env2.svg"
+import sectionAnimate from "../components/SlidingVariants";
+import pageVariant from "../components/PageVariants";
 import willie from "../assets/images/team/willie.jpg";
 
 const teams = [
@@ -75,7 +78,12 @@ const teams = [
 
 export const About = () => {
   return (
-    <section className="about">
+    <motion.section className="about"
+    variants={pageVariant}
+    initial="start"
+      animate="end"
+
+    >
       <Subheading subt="Home / about" tit="About" />
       <section className="section1">
         <div className="section1-left">
@@ -106,7 +114,12 @@ export const About = () => {
       <div className="video-wrap">
         <video src={bird} poster={poster} controls>Your browser does not support video</video>
       </div>
-      <section className="team-section">
+      <motion.section className="team-section" 
+      variants={sectionAnimate}
+      initial="start"
+      whileInView="end"
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ staggerChildren: 1 }}>
         <p>Team Members</p>
         <p>THE BRAINS BEHIND FOG</p>
         <div className="team-members">
@@ -127,8 +140,8 @@ export const About = () => {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
       <Testimonies />
-    </section>
+    </motion.section>
   );
 };

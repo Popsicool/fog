@@ -5,6 +5,7 @@ import uzoma from "../assets/images/uzoma.png";
 import jerry from "../assets/images/jerry.png";
 import ernest from "../assets/images/ernest.png";
 import star from "../assets/images/star.svg";
+import sectionAnimate from "./SlidingVariants";
 
 const testimonials = [
   {
@@ -49,7 +50,13 @@ export const Testimonies = () => {
   //   return () => clearInterval(interval);
   // }, [testimonials.length]);
   return (
-    <motion.section className="testimonies-section">
+    <motion.section className="testimonies-section"
+    variants={sectionAnimate}
+      initial="start"
+      whileInView="end"
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ staggerChildren: 1 }}
+      >
       <p className="custRev">Customers' Review</p>
       <p className="whatPs">What people say?</p>
       <div className="test-bg"></div>

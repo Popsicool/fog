@@ -2,6 +2,8 @@ import React from "react";
 import { useSnapshot } from "valtio";
 import { state } from "../App";
 import { useParams, useNavigate } from "react-router-dom";
+import {motion} from "framer-motion"
+import pageVariant from "../components/PageVariants";
 
 export const Article = () => {
   const navigation = useNavigate();
@@ -20,7 +22,11 @@ export const Article = () => {
       .join("");
   };
   return (
-    <div className="single-article">
+    <motion.div className="single-article"
+    variants={pageVariant}
+    initial="start"
+      animate="end"
+      >
         <div className="img-wrap">
             <img src={singleArticle.picture} alt="article picture" />
         </div>
@@ -28,6 +34,6 @@ export const Article = () => {
             <p className="tt">{singleArticle.title}</p>
             <div dangerouslySetInnerHTML={{ __html: formatPosts(singleArticle.post) }}/>
         </div>
-    </div>
+    </motion.div>
   );
 };

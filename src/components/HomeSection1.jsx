@@ -5,7 +5,7 @@ import check from "../assets/images/check.svg";
 import check2 from "../assets/images/check2.svg";
 import { Link } from "react-router-dom";
 import fogLogo from "../assets/images/fog_logo.jpg";
-import blueberry from "../assets/images/blueberry.svg";
+import sectionAnimate from "./SlidingVariants";
 import bird from "../assets/videos/birds.mp4";
 import "../styles/heroSection1.css";
 import {EggSvg} from "./EggSvg"
@@ -13,7 +13,12 @@ import {EggSvg} from "./EggSvg"
 export const HomeSection1 = () => {
   return (
     <motion.div>
-      <div className="home-section-1">
+      <motion.div className="home-section-1"
+      variants={sectionAnimate}
+      initial="start"
+      whileInView="end"
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ staggerChildren: 1 }}>
         <div className="img-wrap">
           <img src={pol} alt="point of lay birds" />
         </div>
@@ -55,11 +60,16 @@ export const HomeSection1 = () => {
           <EggSvg /> <span>Point of cage</span>
           </p>
           <p>
-          <EggSvg /> <span>Agricultural inputs</span>
+          <EggSvg /> <span>Agric inputs</span>
           </p>
         </div>
-      </div>
-      <div className="home-section-1b">
+      </motion.div>
+      <motion.div className="home-section-1b"
+      variants={sectionAnimate}
+      initial="start"
+      whileInView="end"
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ staggerChildren: 1 }}>
         <div className="left">
           <div className="row">
             <p>
@@ -112,7 +122,7 @@ export const HomeSection1 = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

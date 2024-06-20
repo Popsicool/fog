@@ -5,6 +5,7 @@ import doc from "../assets/images/doc.jpg";
 import pol from "../assets/images/pol1.jpg";
 import check from "../assets/images/check.svg";
 import input from "../assets/images/input.jpg";
+import pageVariant from "../components/PageVariants";
 import consult from "../assets/images/consult.jpg";
 import { AnimatePresence, motion } from "framer-motion";
 import "../styles/services.css";
@@ -24,7 +25,10 @@ export const Services = () => {
     setImages(images.filter((each) => each.category === filter));
   }, [filter]);
   return (
-    <div className="services">
+    <motion.div className="services"
+    variants={pageVariant}
+    initial="start"
+      animate="end">
       <Subheading subt="Home / services" tit="Services" />
       <div className="services-hanging">
         <div className="service-card">
@@ -146,6 +150,6 @@ export const Services = () => {
           </AnimatePresence>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
