@@ -7,6 +7,7 @@ import { Contact } from "./Contact";
 import { Articles } from "./Articles";
 import { Article } from "./Article";
 import { Services } from "./Services";
+import { Error404 } from "./Error404";
 
 export const PageRouters = () => {
   const location = useLocation();
@@ -23,6 +24,7 @@ export const PageRouters = () => {
         <Route path="/articles" element={<Articles/>} />
         <Route path="/articles/:id" element={<Article/>} />
         <Route path="/services" element={<Services/>} />
+        <Route path= "*" element={<Error404/>} />
       </Routes>
     </AnimatePresence>
   );

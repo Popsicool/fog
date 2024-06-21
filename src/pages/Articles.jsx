@@ -10,6 +10,15 @@ import { Link } from "react-router-dom";
 
 export const Articles = () => {
   const { posts } = useSnapshot(state);
+  function convertToDateOnly(dateTimeString) {
+    const date = new Date(dateTimeString);
+    const year = date.getUTCFullYear();
+    const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+    const day = String(date.getUTCDate()).padStart(2, '0');
+    const dateOnlyString = `${year}-${month}-${day}`;
+    
+    return dateOnlyString;
+  }
   
   return (
     <motion.div className="articles"
@@ -18,7 +27,10 @@ export const Articles = () => {
       animate="end"
       >
       <Subheading subt="Home / articles" tit="Articles" />
-      <div className="article-grid">
+      {posts.length < 1 ? <div className="empty-posts">
+        <p>No Article at the moment, please check back latter</p>
+      </div> : 
+        <div className="article-grid">
         {posts.map((post, index) => (
             <Link to={`/articles/${post.id}`} key={index}>
                 <motion.div className="post-card"
@@ -30,7 +42,7 @@ export const Articles = () => {
                 >
                     <div className="card-top">
                     <img src={post.picture} alt="post picture" />
-                    <p className="abs">{post.date}</p>
+                    <p className="abs">{convertToDateOnly(post.created_at)}</p>
                     </div>
                     <div
                     className="card-down"
@@ -42,7 +54,8 @@ export const Articles = () => {
                 </motion.div>
             </Link>
         ))}
-      </div>
+      </div>}
+      
     </motion.div>
   );
 };

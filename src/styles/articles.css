@@ -91,11 +91,28 @@
 }
 
 .single-article .post-main .tt{
-    color: #1F1E17;
+    color: var(--c-green);
     font-size: 1.875rem;
     font-weight: 1000;
     padding-bottom: 2%;
     margin-bottom: 0;
+}
+.single-article .post-main .post-date{
+    color:var(--c-orange);
+    font-weight:700;
+}
+.articles .empty-posts{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding: 0 20%;
+    height: 50vh;
+}
+.articles .empty-posts p{
+    text-align: center;
+    font-style: italic;
+    color: var(--c-orange);
+    font-size: 1.3rem;
 }
 
 @media screen and (max-width:500px) {

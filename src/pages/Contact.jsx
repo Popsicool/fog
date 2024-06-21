@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Subheading } from "../components/Subheading";
 import sub from "../assets/images/sub.svg";
 import sectionAnimate from "../components/SlidingVariants";
@@ -6,6 +6,52 @@ import pageVariant from "../components/PageVariants";
 import "../styles/contact.css";
 import { motion } from "framer-motion";
 export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [messageSent, setmessageSent] = useState(false);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setLoading(true)
+    setmessageSent(false)
+    const formdata = new FormData();
+    formdata.append("name", formData.name);
+    formdata.append("email", formData.email);
+    formdata.append("message", formData.message);
+
+    const requestOptions = {
+      method: "POST",
+      body: formdata,
+      redirect: "follow",
+    };
+
+    fetch("https://backend.fog-agric.com/contact", requestOptions)
+      .then(res => {
+        if (!res.ok){
+          setLoading(false)
+          return
+        }
+      })
+      .then(data => {
+        setLoading(false)
+        setFormData({
+          email: "",
+          name: "",
+          message:""
+        })
+        setmessageSent(true)
+      })
+    };
   return (
     <motion.div className="contact"
     variants={pageVariant}
@@ -45,7 +91,7 @@ export const Contact = () => {
       transition={{ staggerChildren: 1 }}>
         <iframe
           title="location"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15825.954437703762!2d3.8146535999999998!3d7.411048200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1689954050789!5m2!1sen!2sng"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=House%206,%20Onile%20aro%20Goshen%20Estate,%20Ajibode,%20U.I%20Ibadan.+(FOG%20Agricultural%20services)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           className="map"
           allowFullScreen=""
           loading="lazy"
@@ -54,13 +100,32 @@ export const Contact = () => {
         <div className="contact-form">
             <p>Contact us</p>
             <p>Write a Message</p>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="inp-top">
-                    <input type="text" placeholder="Name" required/>
-                    <input type="email" placeholder="Email Address" required/>
+                    <input
+                    type="text"
+                    placeholder="Name"
+                    required
+                    onChange={handleChange}
+                    name="name"
+                    value={formData.name}
+                    />
+                    <input
+                    type="email"
+                    placeholder="Email Address"
+                    name="email"
+                    required
+                    onChange={handleChange}
+                    value={formData.email}
+                    />
                 </div>
-                <textarea placeholder="Write a Message" required></textarea>
-                <button>Send a Message <img src={sub} alt="sub" /></button>
+                <textarea placeholder="Write a Message" required
+                onChange={handleChange}
+                name="message"
+                value={formData.message}
+                ></textarea>
+                <button className={loading ? "spin" : ""} disabled={loading}> Send a Message <img src={sub} alt="sub" /></button>
+                <p className= {messageSent ? "message-sent done" : "message-sent"}>Message sent!</p>
             </form>
         </div>
       </motion.div>

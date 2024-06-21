@@ -7,11 +7,11 @@ export const EggSvg = () => {
       version="1.1"
       id="illustration"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       width="400px"
       height="400px"
       viewBox="0 0 349.796 349.796"
-      xml:space="preserve"
+      xmlSpace="preserve"
     >
       <path
         fill="green"

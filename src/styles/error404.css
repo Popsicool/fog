@@ -1,0 +1,51 @@
+.error-404{
+    padding: 5% 15%;
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+}
+.error-404 div{
+    width: 100%;
+}
+.error-404 p {
+    font-size: 3rem;
+    font-weight: 1000;
+    text-align: center;
+}
+.error-404 button{
+    padding: 3% 10%;
+    background-color: var(--c-green);
+    color: var(--c-white);
+    width: 20vw;
+    border: none;
+    border-radius: 10px;
+    transition: transform .5s ease-in-out, background-color .5s ease-in-out;
+}
+.error-404 button:hover{
+    background-color: var(--c-orange);
+    transform: scale(1.1);
+}
+.error-404 .left{
+    display: grid;
+    place-items: center;
+}
+
+.error-404 .right img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width:500px) {
+    .error-404 p{
+        font-size: 1rem;
+        padding-top: 35%;
+    }
+    .error-404 button{
+        margin-top: -25%;
+    }
+    .error-404 .left{
+        height: 50%;
+        margin-top: 50%;
+    }
+}

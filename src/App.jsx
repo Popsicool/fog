@@ -4,7 +4,6 @@ import { PageRouters } from "./pages/PageRouters";
 import { Navigation } from "./components/Navigation";
 import { Footer } from "./components/Footer";
 import { proxy } from "valtio";
-import posts from "./components/Posts";
 // import { Loader } from "./components/Loader";
 
 export const state = proxy({
@@ -14,22 +13,17 @@ export const state = proxy({
 function App() {
   // const [loading, setLoading] = useState(true);
   useEffect(() => {
-  //   window.addEventListener("load", () => {
-  //     setLoading(false);
-  //   });
-    // const url = "https://www.api.schf.org.ng/all";
-    // fetch(url)
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     state.events = data["past_events"];
-    //     state.images = data["media"];
-    //     state.upcomingEvents = data["upcoming_events"];
-    //     state.loading = false;
-    //   })
-    //   .catch((error) => {
-    //     state.loading = false;
-    //   });
-    state.posts = posts;
+    const url = "https://backend.fog-agric.com/articles";
+    fetch(url)
+      .then((res) => {
+        if (!res.ok){
+          return
+        }
+        return res.json()
+      })
+      .then((data) => {
+        state.posts = data;
+      })
   }, []);
 
   return (

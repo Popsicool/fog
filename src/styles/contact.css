@@ -98,6 +98,30 @@
   padding: 3% 0;
 }
 
+button.spin{
+  cursor: wait;
+  animation: spin-btn 1s ease-in-out infinite alternate !important;
+}
+button.spin img{
+  animation: spin-img 2s ease-in-out infinite alternate !important;
+}
+@keyframes spin-btn {
+  0%, 100%{
+    background-color: var(--c-green);
+  }
+  50%{
+    background-color: var(--c-orange);
+  }
+}
+@keyframes spin-img {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(1turn);
+  }
+  
+}
 .contact button:hover img {
   transform: rotate(270deg);
 }
@@ -113,6 +137,22 @@
   transition-timing-function: ease-in-out;
 }
 
+.message-sent{
+  font-size: 1rem !important;
+  color:var(--c-orange) !important;
+  opacity: 0;
+}
+.message-sent.done{
+  animation: msent 5s ease-in-out 1 !important;
+}
+@keyframes msent{
+  0%, 100%{
+    opacity: 0;
+  }
+  5%, 80%{
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 500px) {
   .contact .contact-cards,
   .contact .contact-down {
@@ -145,3 +185,4 @@
     border: none;
   }
 }
+

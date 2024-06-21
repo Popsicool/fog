@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import fIcon from "../assets/images/fIcon.svg";
 import call from "../assets/images/call.svg";
 import env from "../assets/images/env.svg";
@@ -37,21 +37,63 @@ const lst = [
 ];
 
 export const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [messageSent, setmessageSent] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setLoading(true)
+    setmessageSent(false)
+    const formdata = new FormData();
+    formdata.append("email", email);
+
+    const requestOptions = {
+      method: "POST",
+      body: formdata,
+      redirect: "follow",
+    };
+
+    fetch("https://backend.fog-agric.com/subscribe", requestOptions)
+      .then(res => {
+        if (!res.ok){
+          setLoading(false)
+          return
+        }
+      })
+      .then(data => {
+        setLoading(false)
+        setEmail("")
+        setmessageSent(true)
+      })
+    };
   return (
     <motion.footer
-    variants={sectionAnimate}
+      variants={sectionAnimate}
       initial="start"
       whileInView="end"
       viewport={{ once: false, amount: 0.2 }}
-      transition={{ staggerChildren: 1 }}>
+      transition={{ staggerChildren: 1 }}
+    >
       <div className="footer-top">
         <div className="footer-column">
           <p>FOG</p>
           <p>Your dependable companion for all agric produce</p>
           <ul>
-            <li><a href="#"><img src={facebook} alt="fb" /></a></li>
-            <li><a href="#"><img src={instagram} alt="fb" /></a></li>
-            <li><a href="#"><img src={twitter} alt="fb" /></a></li>
+            <li>
+              <a href="#">
+                <img src={facebook} alt="fb" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src={instagram} alt="fb" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src={twitter} alt="fb" />
+              </a>
+            </li>
           </ul>
         </div>
         <div className="footer-column">
@@ -88,17 +130,31 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="footer-column">
-        <form>
-                <input type="text" placeholder="Your Email Address"/>
-                <button>
-                  <img src={sub} alt="sub" />
-                </button>
-              </form>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              value={email}
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button className={loading ? "spin" : ""} disabled={loading}>
+              <img src={sub} alt="sub" />
+            </button>
+            <p className={messageSent ? "message-sent done" : "message-sent"}>
+              Thank you for subscribing!
+            </p>
+          </form>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© All Copyright {new Date().getFullYear() } by FOG</p>
-        <p>Built by <a href="https://popsicool.fog-agric.com" target="_blank">Popsicool</a></p>
+        <p>© All Copyright {new Date().getFullYear()} by FOG</p>
+        <p>
+          Built by{" "}
+          <a href="https://popsicool.fog-agric.com" target="_blank">
+            Popsicool
+          </a>
+        </p>
       </div>
     </motion.footer>
   );
