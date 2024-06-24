@@ -10,7 +10,7 @@ import ako from "../assets/images/team/ako.jpg";
 import tobi from "../assets/images/team/tobi.jpg";
 import { motion } from "framer-motion";
 import ona from "../assets/images/team/ona.jpg";
-import pop from "../assets/images/team/pop.png";
+import pop from "../assets/images/team/pop.jpg";
 import facebook from "../assets/images/facebook.svg"
 import twitter from "../assets/images/twitter.svg"
 import bird from "../assets/videos/intro.mp4"
