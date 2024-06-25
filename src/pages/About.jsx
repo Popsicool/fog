@@ -5,7 +5,7 @@ import tractor from "../assets/images/tractor.jpg";
 import poster from "../assets/images/fog_logo.jpg";
 import { Subheading } from "../components/Subheading";
 import { Testimonies } from "../components/Testimonies";
-import tecno from "../assets/images/team/tecno1.jpg";
+import tecno from "../assets/images/team/tecno.jpg";
 import ako from "../assets/images/team/ako.jpg";
 import tobi from "../assets/images/team/tobi.jpg";
 import { motion } from "framer-motion";
